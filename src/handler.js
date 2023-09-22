@@ -23,10 +23,7 @@ const saveBookHandler = (req, h) => {
     }
 
     const id = nanoid(16);
-    const finished = false
-    if (pageCount === readPage) {
-        finished = true
-    }
+    const finished = readPage === pageCount
     const insertedAt = new Date().toISOString()
     const updatedAt = insertedAt
 
